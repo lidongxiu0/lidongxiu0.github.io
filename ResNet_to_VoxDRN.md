@@ -30,6 +30,12 @@ This part will also be update recently.
 
 ### 损失函数
 
+这篇论文中提到的损失函数结合了加权局部损失 (weighted focal loss) 和Dice损失 (Dice loss) ，论文希望以此来解决分类不均衡的问题。
+
+其中，加权局部损失：
+![p2](https://latex.codecogs.com/png.latex?L_{wFL}=\sum_{c\in{C}}-\alpha_c\left (1-p_c \right )^\lambda log\left ( p_c \right ))
+
+
 
 
 
