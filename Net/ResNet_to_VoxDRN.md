@@ -44,7 +44,11 @@ Dice损失：
 
 ![p8](https://latex.codecogs.com/png.latex?L_{dice}=1-\frac{2\vert\mathit{X}\cap\mathit{Y}\vert}{\vert\mathit{X}\vert+\vert\mathit{Y}\vert})
 
+其中![p9](https://latex.codecogs.com/png.latex?\vert\mathit{X}\cap\mathit{Y}\vert)表示 _X_ 和 _Y_ 的交集，![p10](https://latex.codecogs.com/png.latex?\vert\mathit{X}\vert) 和 ![p11](https://latex.codecogs.com/png.latex?\vert\mathit{Y}\vert) 分别表示 _X_ 和 _Y_ 的元素个数。就语义分割问题而言， _X_ 表示金标准，_Y_ 表示分割图像。
 
+两个损失函数更具体的内容参看
+- [加权聚焦损失](../Loss_function/focal_loss)
+- [Dice损失](../Loss_function/dice_loss)
 
 这篇论文中，将聚焦损失和Dice损失结合，由于聚焦损失会导致网络保留复杂的边界细节，但会带来噪声，Dice损失会产生更平滑的分割。
 

@@ -3,4 +3,4 @@
 
 
 ### - [test](./templetFile)
-### - [ResNet to VoxDRN](./ResNet_to_VoxDRN)
+### - [ResNet to VoxDRN](./Net/ResNet_to_VoxDRN)
