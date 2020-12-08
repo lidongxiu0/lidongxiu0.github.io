@@ -1,7 +1,4 @@
 title: Li_DX Blog
 description: A Blog!
 
-theme: null
-
-readme_index:
-  with_frontmatter: true
+theme: jekyll-theme-slate
