@@ -2,3 +2,6 @@ title: Li_DX Blog
 description: A Blog!
 
 theme: jekyll-theme-slate
+
+readme_index:
+  with_frontmatter: true
