@@ -30,7 +30,7 @@ Bayesian VoxDRN基于这种思想设计，在上面的VoxDRN的基础上加入�
 
 ### 损失函数
 
-这篇论文中提到的损失函数结合了加权局部损失 (weighted focal loss) 和Dice损失 (Dice loss) ，论文希望以此来解决分类不均衡的问题。
+这篇论文中提到的损失函数结合了加权聚焦损失 (weighted focal loss) 和Dice损失 (Dice loss) ，论文希望以此来解决分类不均衡的问题。
 
 其中，加权局部损失：
 
@@ -38,10 +38,10 @@ Bayesian VoxDRN基于这种思想设计，在上面的VoxDRN的基础上加入�
 
 其中![p3](https://latex.codecogs.com/png.latex?\vert\mathit{X}\vert) 和 ![p4](https://latex.codecogs.com/png.latex?\vert\mathit{X}_c\vert) 分别表示所有类的频率和 _c_ 类的频率，因此![p5](https://latex.codecogs.com/png.latex?\alpha_c=1-\frac{\vert\mathit{X}_c\vert}{\vert\mathit{X}\vert})用来自适应地平衡心脏子结构大小的重要性。
 
-![p6](https://latex.codecogs.com/png.latex?p_c)表示 _c_ 类的概率，![p7](https://latex.codecogs.com/png.latex?\left (1-p_c\right )^\lambda) 是一个尺度因子(scaling factor)，用来减少好的分类样本的相对损失。通过这样来更关注难分类和错分类的样本。
+![p6](https://latex.codecogs.com/png.latex?p_c)表示 _c_ 类的概率，![p7](https://latex.codecogs.com/png.latex?\left (1-p_c\right )^\lambda) 是一个尺度因子(scaling factor)，用来减少好的分类样本的相对损失。通过这样来更关注难分类和错分类的样本。这篇论文中，将聚焦损失和Dice损失结合，由于聚焦损失会导致网络保留复杂的边界细节，但会带来噪声，Dice损失会产生更平滑的分割。
 
 
-
+### 迭代开关训练(Iterative Switch Training)
 
 
 
