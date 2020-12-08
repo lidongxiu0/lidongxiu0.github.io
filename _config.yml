@@ -3,5 +3,5 @@ description: A Blog!
 
 theme: jekyll-theme-slate
 
-readme_index:
+readme_index: README.md
   with_frontmatter: true
