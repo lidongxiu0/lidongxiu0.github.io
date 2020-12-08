@@ -18,11 +18,11 @@ This part will also be update recently.
 
 ### 网络结构
 
- Gal 和 Ghahramani [4-1] 中证明，贝叶斯CNN在小数据的过拟合上提供了更好的鲁棒性。这一网络是目的是找到后验概率 ![p1](https://latex.codecogs.com/png.latex?p(\mathbf{W}\mid\mathbf{X},\mathbf{Y})) 在网络中用variational dropout来解决这一问题。
+Gal 和 Ghahramani [4-1] 中证明，贝叶斯CNN在小数据的过拟合上提供了更好的鲁棒性。这一网络是目的是找到后验概率 ![p1](https://latex.codecogs.com/png.latex?p(\mathbf{W}\mid\mathbf{X},\mathbf{Y})) 在网络中用variational dropout来解决这一问题。
 
- Bayesian VoxDRN基于这种思想设计，在上面的VoxDRN的基础上加入了4个额外的dropout层。并且最后的输出变成了两个DUC层输出两类结果，这两类输出会在下文训练中提到。
+Bayesian VoxDRN基于这种思想设计，在上面的VoxDRN的基础上加入了4个额外的dropout层。并且最后的输出变成了两个DUC层输出两类结果，这两类输出会在下文训练中提到。
 
- ![Bayesian_VoxDRN](./image/Bayesian_VoxDRN.png)
+![Bayesian_VoxDRN](./image/Bayesian_VoxDRN.png)
 
 这其中的dropout层训练时的丢弃概率为0.5，以此避免过拟合。
 
@@ -33,7 +33,10 @@ This part will also be update recently.
 这篇论文中提到的损失函数结合了加权局部损失 (weighted focal loss) 和Dice损失 (Dice loss) ，论文希望以此来解决分类不均衡的问题。
 
 其中，加权局部损失：
+
 ![p2](https://latex.codecogs.com/png.latex?L_{wFL}=\sum_{c\in{C}}-\alpha_c\left (1-p_c \right )^\lambda log\left ( p_c \right ))
+
+其中![p3](https://latex.codecogs.com/png.latex?\left | \mathit{X} \right |) 和 ![p4](https://latex.codecogs.com/png.latex?\left | \mathit{X}_c \right |) 分别表示所有类的频率和_c_类的频率
 
 
 
