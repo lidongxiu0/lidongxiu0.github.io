@@ -18,11 +18,11 @@ This part will also be update recently.
 
 ### 网络结构
 
- Gal 和 Ghahramani /[*4-1/] 中证明，贝叶斯CNN在小数据的过拟合上提供了更好的鲁棒性。这一网络是目的是找到后验概率[PostDistr](./image/PostDistr.png)，在网络中用variational dropout来解决这一问题。
+ Gal 和 Ghahramani [*4-1] 中证明，贝叶斯CNN在小数据的过拟合上提供了更好的鲁棒性。这一网络是目的是找到后验概率！[PostDistr](./image/PostDistr.png)，在网络中用variational dropout来解决这一问题。
 
  Bayesian VoxDRN基于这种思想设计
 
- [Bayesian_VoxDRN](./image/Bayesian_VoxDRN.png)
+ ![Bayesian_VoxDRN](./image/Bayesian_VoxDRN.png)
 
 这其中的dropout层训练时的丢弃概率为0.5，以此避免过拟合。
 
