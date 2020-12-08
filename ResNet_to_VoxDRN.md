@@ -20,7 +20,7 @@ This part will also be update recently.
 
  Gal 和 Ghahramani [*4-1] 中证明，贝叶斯CNN在小数据的过拟合上提供了更好的鲁棒性。这一网络是目的是找到后验概率
  ```markdown
- https://latex.codecogs.com/png.latex?\p(\mathbf{W}|\mathbf{X},\mathbf{Y})
+ https://latex.codecogs.com/png.latex?p(\mathbf{W}|\mathbf{X},\mathbf{Y})
  ```
  在网络中用variational dropout来解决这一问题。
 
