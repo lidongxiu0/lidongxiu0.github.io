@@ -18,9 +18,9 @@ This part will also be update recently.
 
 ### 网络结构
 
- Gal 和 Ghahramani [*4-1] 中证明，贝叶斯CNN在小数据的过拟合上提供了更好的鲁棒性。这一网络是目的是找到后验概率 ![p1](https://latex.codecogs.com/png.latex?p(\mathbf{W}\mid\mathbf{X},\mathbf{Y})) 在网络中用variational dropout来解决这一问题。
+ Gal 和 Ghahramani [4-1] 中证明，贝叶斯CNN在小数据的过拟合上提供了更好的鲁棒性。这一网络是目的是找到后验概率 ![p1](https://latex.codecogs.com/png.latex?p(\mathbf{W}\mid\mathbf{X},\mathbf{Y})) 在网络中用variational dropout来解决这一问题。
 
- Bayesian VoxDRN基于这种思想设计
+ Bayesian VoxDRN基于这种思想设计，在上面的VoxDRN的基础上加入了4个额外的dropout层。并且最后的输出变成了两个DUC层输出两类结果，这两类输出会在下文训练中提到。
 
  ![Bayesian_VoxDRN](./image/Bayesian_VoxDRN.png)
 
@@ -37,4 +37,4 @@ This part will also be update recently.
 
 [4-0] Shi Z, Zeng G, Zhang L, et al. Bayesian voxdrn: A probabilistic deep voxelwise dilated residual network for whole heart segmentation from 3d mr images[C]//International Conference on Medical Image Computing and Computer-Assisted Intervention. Springer, Cham, 2018: 569-577.
 
- [*4-1] Gal Y, Ghahramani Z. Bayesian convolutional neural networks with Bernoulli approximate variational inference[J]. arXiv preprint arXiv:1506.02158, 2015.
+[4-1] Gal Y, Ghahramani Z. Bayesian convolutional neural networks with Bernoulli approximate variational inference[J]. arXiv preprint arXiv:1506.02158, 2015.
