@@ -21,7 +21,7 @@ Gal 和 Ghahramani [4-1] 中证明，贝叶斯CNN在小数据的过拟合上提�
 
 Bayesian VoxDRN基于这种思想设计，在上面的VoxDRN的基础上加入了4个额外的dropout层。并且最后的输出变成了两个DUC层输出两类结果，这两类输出会在下文训练中提到。
 
-![Bayesian_VoxDRN](./image/Bayesian_VoxDRN.png)
+![Bayesian_VoxDRN](../image/Bayesian_VoxDRN.png)
 
 这其中的dropout层训练时的丢弃概率为0.5，以此避免过拟合。
 
