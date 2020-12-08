@@ -1,20 +1,19 @@
 ## ResNet
 
-This part will be update recently.
+This part will be update.
 
 ## Dilated Residual Network (DRN)
 
-This part will be update recently, too.
+This part will be update, too.
 
 
 ## Voxelwise Dilated Residual Network (VoxDRN)
 
-This part will also be update recently.
+This part will also be update.
 
 
 ## Bayesian VoxDRN [4-0]
 
-### This part will be update recently.
 
 ### 网络结构
 
