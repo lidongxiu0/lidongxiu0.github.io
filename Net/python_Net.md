@@ -12,7 +12,7 @@ class Net(nn.Module)    # 这里的 nn.Module 是继承
     pass
 
 # 初始化一个类实例，将x参数传给forward函数并运行
-net = Net( ， ，)
+net = Net( , , )
 
     
 # 定义优化器
