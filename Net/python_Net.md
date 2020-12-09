@@ -1,5 +1,5 @@
 ```markdown
-import torch
+`import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
@@ -35,5 +35,5 @@ for t in range(100):
   # 清零是由于pytorch的梯度是累加的，因此要对每一次的梯度降为0
   optimizer.zero_grad()
   loss.backward()
-  optimizer.step()
+  optimizer.step()`
 ```
