@@ -13,9 +13,9 @@ ResNet引入一个深度残差学习的框架来解决退化问题，通过显�
 
 ![a2](../image/resblock.png)
 
-将期望的映射表示为![a3](https://latex.codecogs.com/png.latex?H\left (x\right ))，更浅层的网络连过来的线表示为![a4](https://latex.codecogs.com/png.latex?x)，前一层传递的为![a5](https://latex.codecogs.com/png.latex?\rm{F} (x))，因此，![a6](https://latex.codecogs.com/png.latex?\rm{H}=\rm{F} (x)+x)
+将期望的映射表示为![a3](https://latex.codecogs.com/png.latex?H\left (x\right ))，更浅层的网络连过来的线表示为![a4](https://latex.codecogs.com/png.latex?x)，前一层传递的为![a5](https://latex.codecogs.com/png.latex?\F (x))，因此，![a6](https://latex.codecogs.com/png.latex?\H=F (x)+x)
 
-这样即使在极端的情况下![a5](https://latex.codecogs.com/png.latex?\rm{F} (x)=0)时，也可以保证![a3](https://latex.codecogs.com/png.latex?H\left (x\right ))至少等于![a4](https://latex.codecogs.com/png.latex?x)。
+这样即使在极端的情况下![a5](https://latex.codecogs.com/png.latex?\F (x)=0)时，也可以保证![a3](https://latex.codecogs.com/png.latex?H\left (x\right ))至少等于![a4](https://latex.codecogs.com/png.latex?x)。
 
 残差网络层数不同时，网络结构也有一定的变化
 
