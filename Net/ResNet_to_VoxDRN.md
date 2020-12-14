@@ -37,6 +37,17 @@ This part will be update, too.
 This part will also be update.
 
 
+## Bayesian CNN [4-1]
+
+这篇论文将网络中的dropout和贝叶斯网络中的变分推理结合起来。
+
+### 概率建模和变分推理
+
+给定训练输入![d1](https://latex.codecogs.com/png.latex?{\mathbf{x}_1,\cdots,\mathbf{x}_N})和对应的输出![d2](https://latex.codecogs.com/png.latex?{\mathbf{y}_1,\cdots,\mathbf{y}_N})
+
+
+
+
 ## Bayesian VoxDRN [4-0]
 
 
