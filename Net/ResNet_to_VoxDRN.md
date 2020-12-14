@@ -56,7 +56,7 @@ This part will also be update.
 
 ### dropout
 
-这里定义![d12](https://latex.codecogs.com/png.latex?\hat{\mathbf{y}})
+这里定义![d12](https://latex.codecogs.com/png.latex?\hat{\mathbf{y}})是L层网络的输出，损失函数![d13](https://latex.codecogs.com/png.latex?E\left (\cdot,\cdot\right ))是softmax损失函数或Euclidean损失（平方损失）
 
 
 
