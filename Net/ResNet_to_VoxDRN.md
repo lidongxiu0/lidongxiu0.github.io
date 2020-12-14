@@ -54,6 +54,9 @@ This part will also be update.
 
 ![d11](../image/Bayesian_CNN_eq2.png)
 
+### dropout
+
+这里定义![d12](https://latex.codecogs.com/png.latex?\hat{\mathbf{y}})
 
 
 
