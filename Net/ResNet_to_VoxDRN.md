@@ -2,8 +2,8 @@
 
 This part will be update.
 
-- _Is learning better networks as easy as stacking more layers?_
-- _学习更好的网络是否像堆叠更多的层一样容易？_
+ _Is learning better networks as easy as stacking more layers?_
+ _学习更好的网络是否像堆叠更多的层一样容易？_
 
 这是在论文[1]中提出的问题，回答这一问题的一大障碍就是梯度消失\/爆炸问题，这一问题阻碍了收敛。这个问题在ResNet提出之前通过归一化初始化和中间归一化层来得到很大程度的解决，使具有数十层的网络收敛。但是更深的网络会出现退化的问题，而这种问题并非是由于过拟合引起的。
 
@@ -13,9 +13,9 @@ ResNet引入一个深度残差学习的框架来解决退化问题，通过显�
 
 ![a2](../image/resblock.png)
 
-将期望的映射表示为![a3](https://latex.codecogs.com/png.latex?H\left (x\right ))，更浅层的网络连过来的线表示为![a4](https://latex.codecogs.com/png.latex?x)，前一层传递的为![a5](https://latex.codecogs.com/png.latex?\F\left (x\right ))，因此，![a6](https://latex.codecogs.com/png.latex?\H=F\left (x \right )+x)
+将期望的映射表示为![a3](https://latex.codecogs.com/png.latex?H\left (x\right ))，更浅层的网络连过来的线表示为![a4](https://latex.codecogs.com/png.latex?x)，前一层传递的为![a5](https://latex.codecogs.com/png.latex?F\left (x\right ))，因此，![a6](https://latex.codecogs.com/png.latex?H=F\left (x \right )+x)
 
-这样即使在极端的情况下![a5](https://latex.codecogs.com/png.latex?\F\left (x\right )=0)时，也可以保证![a3](https://latex.codecogs.com/png.latex?H\left (x\right ))至少等于![a4](https://latex.codecogs.com/png.latex?x)。
+这样即使在极端的情况下![a5](https://latex.codecogs.com/png.latex?F\left (x\right )=0)时，也可以保证![a3](https://latex.codecogs.com/png.latex?H\left (x\right ))至少等于![a4](https://latex.codecogs.com/png.latex?x)。
 
 残差网络层数不同时，网络结构也有一定的变化
 
