@@ -56,7 +56,21 @@ This part will also be update.
 
 ### dropout
 
-这里定义![d12](https://latex.codecogs.com/png.latex?\hat{\mathbf{y}})是L层网络的输出，损失函数![d13](https://latex.codecogs.com/png.latex?E\left (\cdot,\cdot\right ))是softmax损失函数或Euclidean损失（平方损失）
+这里定义![d12](https://latex.codecogs.com/png.latex?\hat{\mathbf{y}})是L层网络的输出，损失函数![d13](https://latex.codecogs.com/png.latex?E\left (\cdot,\cdot\right ))是softmax损失函数或Euclidean损失（平方损失）。定义每一层![d16](https://latex.codecogs.com/png.latex?i=1,\cdots,L)中，![d14](https://latex.codecogs.com/png.latex?\mathbf{W}_i)是网络的权重矩阵，![d15](https://latex.codecogs.com/png.latex?\mathbf{b}_i)是偏置向量。使用![d17](https://latex.codecogs.com/png.latex?L_2)正则化，即
+
+![d18](../image/Bayesian_CNN_eq3.png)
+
+### dropout作为贝叶斯神经网络中的近似变分推理
+
+论文中，利用伯努利近似变分分布在贝叶斯网络中构造近似变分推断，并将它与dropout联系起来。由于前面的![d19](https://latex.codecogs.com/png.latex?L_{VI})是难以处理的，因此 这篇论文使用Monte Carlo积分近似积分![d20](https://latex.codecogs.com/png.latex?\omega)，得到![d19](https://latex.codecogs.com/png.latex?L_{VI})的无偏估计
+
+![d21](../image/Bayesian_CNN_eq4.png)
+
+将后验概率替换为近似后验，利用Monte Carlo积分可得：
+
+![d22](../image/Bayesian_CNN_eq5.png)
+
+这被称为 **MC dropout** 。
 
 
 
