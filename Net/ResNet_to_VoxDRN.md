@@ -46,7 +46,13 @@ This part will also be update.
 
 给定训练输入![d1](https://latex.codecogs.com/png.latex?{\mathbf{x}_1,\cdots,\mathbf{x}_N})和对应的输出![d2](https://latex.codecogs.com/png.latex?{\mathbf{y}_1,\cdots,\mathbf{y}_N})。在概率建模中，希望估计一个函数：![d3](https://latex.codecogs.com/png.latex?\mathbf{y}=\mathbf{f}\left (\mathbf{x}\right ))。
 
-按照贝叶斯方法，在函数空间![d4](https://latex.codecogs.com/png.latex?p\left (\mathbf{f}\right ))给出先验分布，定义一个概率![d5](https://latex.codecogs.com/png.latex?p\left ( \mathbf{Y}\mid\mathbf{f},\mathbf{X} \right ))来表示给定函数生成观测的过程。在给定数据集的函数空间上寻找后验分布![d6](https://latex.codecogs.com/png.latex?p\left ( \mathbf{f}\mid\mathbf{X},\mathbf{Y} \right ))。
+按照贝叶斯方法，在函数空间![d4](https://latex.codecogs.com/png.latex?p\left (\mathbf{f}\right ))给出先验分布，定义一个概率![d5](https://latex.codecogs.com/png.latex?p\left ( \mathbf{Y}\mid\mathbf{f},\mathbf{X} \right ))来表示给定函数生成观测的过程。在给定数据集的函数空间上寻找后验分布![d6](https://latex.codecogs.com/png.latex?p\left ( \mathbf{f}\mid\mathbf{X},\mathbf{Y} \right ))。通过对所有可能的函数![d7](https://latex.codecogs.com/png.latex?\mathbf{f})积分，来预测一个新的输入![d8](https://latex.codecogs.com/png.latex?\mathrm{x}^*)的输出。
+
+![d9](../image/Bayesian_CNN_eq1.png)
+
+通过变分推导，将上述公式推导得到![d10](https://latex.codecogs.com/png.latex?L_{VI})，即
+
+![d11](../image/Bayesian_CNN_eq2.png)
 
 
 
