@@ -48,7 +48,7 @@ This part will also be update.
 
 按照贝叶斯方法，在函数空间![d4](https://latex.codecogs.com/png.latex?p\left (\mathbf{f}\right ))给出先验分布，定义一个概率![d5](https://latex.codecogs.com/png.latex?p\left ( \mathbf{Y}\mid\mathbf{f},\mathbf{X} \right ))来表示给定函数生成观测的过程。在给定数据集的函数空间上寻找后验分布![d6](https://latex.codecogs.com/png.latex?p\left ( \mathbf{f}\mid\mathbf{X},\mathbf{Y} \right ))。通过对所有可能的函数![d7](https://latex.codecogs.com/png.latex?\mathbf{f})积分，来预测一个新的输入![d8](https://latex.codecogs.com/png.latex?\mathrm{x}^*)的输出。
 
-![d9](../image/Bayesian_CNN_eq1.png)
+![d9](../image/Bayesian_CNN_eq1.png)	(4.1)
 
 通过变分推导，将上述公式推导得到![d10](https://latex.codecogs.com/png.latex?L_{VI})，即
 
@@ -58,19 +58,23 @@ This part will also be update.
 
 这里定义![d12](https://latex.codecogs.com/png.latex?\hat{\mathbf{y}})是L层网络的输出，损失函数![d13](https://latex.codecogs.com/png.latex?E\left (\cdot,\cdot\right ))是softmax损失函数或Euclidean损失（平方损失）。定义每一层![d16](https://latex.codecogs.com/png.latex?i=1,\cdots,L)中，![d14](https://latex.codecogs.com/png.latex?\mathbf{W}_i)是网络的权重矩阵，![d15](https://latex.codecogs.com/png.latex?\mathbf{b}_i)是偏置向量。使用![d17](https://latex.codecogs.com/png.latex?L_2)正则化，即
 
-![d18](../image/Bayesian_CNN_eq3.png)
+![d18](../image/Bayesian_CNN_eq3.png)	(4.2)
 
 ### dropout作为贝叶斯神经网络中的近似变分推理
 
 论文中，利用伯努利近似变分分布在贝叶斯网络中构造近似变分推断，并将它与dropout联系起来。由于前面的![d19](https://latex.codecogs.com/png.latex?L_{VI})是难以处理的，因此 这篇论文使用Monte Carlo积分近似积分![d20](https://latex.codecogs.com/png.latex?\omega)，得到![d19](https://latex.codecogs.com/png.latex?L_{VI})的无偏估计
 
-![d21](../image/Bayesian_CNN_eq4.png)
+![d21](../image/Bayesian_CNN_eq4.png)	(4.3)
 
 将后验概率替换为近似后验，利用Monte Carlo积分可得：
 
-![d22](../image/Bayesian_CNN_eq5.png)
+![d22](../image/Bayesian_CNN_eq5.png)	(4.4)
 
 这被称为 **MC dropout** 。
+
+### 贝叶斯CNN
+
+贝叶斯网络中的伯努利变分通过在网络的某一个权重层后添加dropout来实现，在训练时以近似的分布在每一层后执行dropout，测试时使用公式(4.4)估计后验概率。在贝叶斯网络中，通常后验概率充当正则化器，近似的对权重进行积分，而没有积分的权重通常会过拟合。
 
 
 
