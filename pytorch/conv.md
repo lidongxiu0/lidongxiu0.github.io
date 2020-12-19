@@ -17,8 +17,11 @@ from .utils import _single, _pair, _triple, _reverse_repeat_tuple
 
 from ..common_types import _size_1_t, _size_2_t, _size_3_t
 from typing import Optional, List, Tuple
+```
 
+在_ConvNd类中，定义conv的常量和类型
 
+```python
 class _ConvNd(Module):
 
     __constants__ = ['stride', 'padding', 'dilation', 'groups',
