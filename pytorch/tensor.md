@@ -11,3 +11,9 @@
 16位有符号整型 | torch.ShortTensor | torch.cuda.ShortTensor
 32位有符号整型 | torch.IntTensor | torch.cuda.IntTensor
 64位有符号整型 | torch.LongTensor | torch.cuda.LongTensor
+
+
+- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> supported
+- [x] list syntax required (any unordered or ordered list supported)
+- [x] this is a complete item
+- [ ] this is an incomplete item
