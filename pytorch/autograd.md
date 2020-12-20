@@ -23,4 +23,22 @@ Tensor有两个重要属性，分别记录Tensor的梯度和经历的操作。
 
 图中，![i2](https://latex.codecogs.com/png.latex?x)、![i3](https://latex.codecogs.com/png.latex?w)和![i4](https://latex.codecogs.com/png.latex?b)都是用户自己创建的，因此作为叶节点，![i7](https://latex.codecogs.com/png.latex?wx)首先经过乘法算子产生中间节点![i8](https://latex.codecogs.com/png.latex?y)，然后与![i4](https://latex.codecogs.com/png.latex?b)经过加法算法产生最终输出![i5](https://latex.codecogs.com/png.latex?z)，并作为根节点。
 
-Autograd的基本原理是随着每一步Tensor的计算操作，逐渐生成计算图，并将操作的function记录在Tensor的grad_fn中，在前向计算完后，只需对根节点进行backward函数操作，即可从当前根节点自动进行反向传播与梯度计算，从而得到每一个叶子节点的梯度，梯度计算遵循链式求导法则。
+Autograd的基本原理是随着每一步Tensor的计算操作，逐渐生成计算图，并将操作的`function`记录在`Tensor`的`grad_fn`中，在前向计算完后，只需对根节点进行`backward`函数操作，即可从当前根节点自动进行反向传播与梯度计算，从而得到每一个叶子节点的梯度，梯度计算遵循链式求导法则。
+
+## Autograd使用注意事项
+
+### 动态图特性
+
+PyTorch建立的计算图是动态的，是PyTorch的一大特点。动态图是指程序运行时，每次前向传播时从头开始构建计算图，这样不同的前向传播就可以有不同的计算图，也可以在前向时插入各种Python的控制语句，不需要事先把所有的图都构建出来，且可以方便地查看中间过程变量。
+
+### backward()函数
+
+`backward()`函数有一个需要传入的参数`grad_variables`，代表根节点的导数，也可以看做跟节点各部分的权重系数。因为PyTorch不允许`Tensor`对`Tensor`求导，求导时都是标量对于`Tensor`进行求导。因此，如果跟节点是向量，则应配以对应大小的权重，并求和得到标量，再反传。如果根节点的值是标量，则该参数可以忽略，默认为1。
+
+### 梯度累加
+
+当有多个输出需要同时进行梯度反传时，需要将`retain_graph`设置为`True`，从而保证在计算多个输出的梯度时互不影响。
+
+
+
+- 内容来自：董洪义.深度学习之PyTorch物体检测实战[M].北京:机械工业出版社, 2020.48-51.
