@@ -3,6 +3,7 @@
 ## Tensor数据类型
 
 **数据类型** | **CPU Tensor** | **GPU Tensor**
+------------|----------------|-----------------
 32位浮点 | torch.FloatTensor | torch.cuda.FloatTensor
 64位浮点 | torch.DoubleTensor | torch.cuda.DoubleTensor
 16位半精度浮点 | N/A | torch.cuda.HalfTensor
