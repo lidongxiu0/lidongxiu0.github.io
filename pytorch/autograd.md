@@ -9,7 +9,7 @@ import torch
 a = torch.randn(2, 2, requires_grad=True)
 ```
 
-这里的requires_grad参数表示是否需要对该Tensor进行求导，默认为False；设置为True则需要求导，并且依赖于该Tensor的之后的所有节点都需要求导。
+这里的`requires_grad`参数表示是否需要对该Tensor进行求导，默认为False；设置为True则需要求导，并且依赖于该Tensor的之后的所有节点都需要求导。
 
 Tensor有两个重要属性，分别记录Tensor的梯度和经历的操作。
 - grad: 该Tensor对应的梯度，类型为`Tensor`，与Tensor同维度
@@ -40,5 +40,27 @@ PyTorch建立的计算图是动态的，是PyTorch的一大特点。动态图是
 当有多个输出需要同时进行梯度反传时，需要将`retain_graph`设置为`True`，从而保证在计算多个输出的梯度时互不影响。
 
 
+## PyTorch网络代码中的自动求导
 
-- 内容来自：董洪义.深度学习之PyTorch物体检测实战[M].北京:机械工业出版社, 2020.48-51.
+在PyTorch中的深度学习计算时，一般的模式是：
+```python
+# 正向传播
+out = model(x)
+loss = criterion(out, y)
+
+# 反向传播
+optimizer.zero_grad()
+loss.backward()
+optimizer.step()
+```
+
+这里的`loss`一般是梯度下降要优化的目标函数，`loss.backward()`表示自动求梯度。
+
+但后面的`optimizer`优化器清除了梯度后，并没有与`loss`建立任何关系。自动求导完成后，直接调用`optimizer.step()`去更新参数。
+
+`optimizer`更新参数的方法即是PyTorch的自动求导机制，函数做`backward()`时会自动更新自变量的`grad`值，因此不需要知道函数是什么。`optimizer`不用关心`loss`是什么，只要知道应更新的变量即可。
+
+
+内容参考自：
+[1]. 董洪义.深度学习之PyTorch物体检测实战[M].北京:机械工业出版社, 2020.48-51.
+[2]. 刘子瑛.TensorFlow+PyTorch深度学习从算法到实战[M].北京:北京大学出版社,2019.155-157.
