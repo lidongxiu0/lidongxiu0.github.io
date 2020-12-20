@@ -16,6 +16,7 @@
 ### - [聚焦损失函数](./Loss_function/focal_loss)
 
 ## pytorch源码学习
-	
+
+### - [Tensor](./pytorch/tensor)	
 ### - [Autograd](./pytorch/autograd)
 ### - [conv.py](./pytorch/conv)
