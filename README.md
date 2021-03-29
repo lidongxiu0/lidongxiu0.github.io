@@ -24,7 +24,7 @@
 ## 步态识别数据集
 
 - [USF数据库](http://www.eng.usf.edu/cvprg/)
-- [中科院自动化所\(CASIA\)数据库](www.cbsr.ia.ac.cn/china/Gait Databases CH.asp)
+- [中科院自动化所\(CASIA\)数据库](http://www.cbsr.ia.ac.cn/china/Gait Databases CH.asp)
 - [基于惯性的gait_mobile_Acc_data数据集](https://github.com/palewithout/Gait_Datasets)
 - [OU-ISIR Gait Database](http://www.am.sanken.osaka-u.ac.jp/BiometricDB/GaitTM.html)
 - [Automatic Gait Recognition for Human ID at a Distance](http://www.gait.ecs.soton.ac.uk/)
