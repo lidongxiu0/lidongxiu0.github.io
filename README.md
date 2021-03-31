@@ -3,11 +3,10 @@
 
 ### - [test](./templetFile)
 
-## 全心分割深度学习方法
+## 深度学习
 
-### - [pytorch写网络结构](./Net/python_Net)
 ### - [ResNet to VoxDRN](./Net/ResNet_to_VoxDRN)
-
+### - [UNet](./Net/UNet)
 
 ## 损失函数
 
